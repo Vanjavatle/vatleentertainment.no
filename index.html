@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vanja V | Artist & låtskriver</title>
+  <meta name="description" content="Offisiell nettside for Vanja V – norsk artist og låtskriver. Musikk, konserter, booking og kontakt.">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="icon" href="assets/vv-icon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --black:#0b0b0b; --off:#f7f5f2; --warm:#cfc7bf;
+      --burgundy:#5a0f1a; --gold:#d4af57; --line:rgba(212,175,87,.38);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--black);color:var(--off);font-family:Montserrat,Arial,sans-serif;font-weight:300}
+    a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
+    .wrap{width:min(1180px,90vw);margin:auto}
+    header{position:absolute;z-index:5;left:0;right:0;top:0;padding:24px 0}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .nav-left{display:flex;align-items:center;gap:22px}
+    .mark{width:42px;height:42px;border-radius:4px;object-fit:cover}
+    .navlinks{display:flex;gap:30px;font-size:12px;letter-spacing:.13em;text-transform:uppercase}
+    .lang-switch{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+    .lang-switch button{background:none;border:0;color:#b8b2ad;cursor:pointer;padding:6px 2px;font:inherit}
+    .lang-switch button.active{color:var(--gold)}
+    .hero{min-height:94vh;position:relative;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid #262626}
+    .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.96) 0%,rgba(5,5,5,.78) 34%,rgba(5,5,5,.18) 67%,rgba(5,5,5,.08) 100%)}
+    .hero-content{position:relative;z-index:2;width:min(650px,80vw);padding-top:70px}
+    .signature{width:min(520px,72vw);filter:drop-shadow(0 2px 10px rgba(0,0,0,.35));margin-bottom:22px}
+    .eyebrow{font-size:14px;letter-spacing:.32em;text-transform:uppercase;margin:0 0 12px}
+    .tagline{font-family:"Cormorant Garamond",serif;font-size:25px;font-style:italic;color:var(--gold);margin:0 0 30px}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-width:145px;padding:14px 22px;border:1px solid var(--gold);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+    .btn.primary{background:var(--burgundy);border-color:var(--burgundy)}
+    section{padding:76px 0;border-bottom:1px solid #262626}
+    .label{color:#b84752;font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
+    h2{font-family:"Cormorant Garamond",serif;font-size:clamp(42px,6vw,72px);font-weight:500;margin:0 0 24px;line-height:.95}
+    .release{display:grid;grid-template-columns:minmax(260px,430px) 1fr;gap:70px;align-items:center}
+    .release-cover{box-shadow:0 24px 70px rgba(0,0,0,.45)}
+    .streaming{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .live-section{background:linear-gradient(100deg,#24070b,#5a0f1a 55%,#25070b)}
+    .live-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .live-img{width:100%;height:520px;object-fit:cover;object-position:center}
+    .date{font-family:"Cormorant Garamond",serif;font-size:52px;line-height:1;margin:8px 0 28px}
+    .schedule{display:grid;grid-template-columns:100px 1fr;gap:12px 18px;margin:24px 0 30px;font-size:14px}
+    .schedule strong{color:var(--gold);font-weight:500}
+    .ticket-note{font-size:12px;color:#d8c8c8;margin-top:10px}
+    .about{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center}
+    .about img{width:100%;height:560px;object-fit:cover;object-position:center 25%}
+    .about p{line-height:1.8;color:#d5d0cb;max-width:560px}
+
+    .booking-section{background:#11100f}
+    .booking-intro{max-width:760px;margin-bottom:42px}
+    .booking-intro p{line-height:1.8;color:#d5d0cb;font-size:16px}
+    .booking-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:34px 0 38px}
+    .booking-card{border:1px solid var(--line);padding:28px 24px;min-height:190px;background:rgba(255,255,255,.015)}
+    .booking-card h3{font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:27px;font-weight:500;margin:0 0 14px}
+    .booking-card p{color:#cfc9c3;line-height:1.65;font-size:13px;margin:0}
+    .booking-contact{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+    .booking-contact-note{font-size:13px;color:#aaa39d}
+
+    footer{padding:54px 0 30px}
+    .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:50px}
+    .footer-title{font-size:12px;letter-spacing:.17em;text-transform:uppercase;color:#b84752;margin-bottom:18px}
+    .email{color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:4px}
+    .socials{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+    .wave-logo{width:210px;max-width:100%;height:auto;margin-top:0;color:var(--gold)}
+    .company{font-family:"Cormorant Garamond",serif;color:var(--gold);letter-spacing:.12em;margin-top:8px}
+    .copyright{text-align:center;color:#8e8985;font-size:10px;letter-spacing:.08em;margin-top:48px}
+    @media(max-width:800px){
+      .navlinks{display:none}.hero{min-height:86vh}.hero:after{background:linear-gradient(0deg,rgba(5,5,5,.92) 0%,rgba(5,5,5,.62) 54%,rgba(5,5,5,.18) 100%)}
+      .hero-bg{object-position:58% center}.hero-content{align-self:flex-end;padding:0 0 70px;width:100%}
+      .signature{width:min(430px,88vw)}.release,.live-grid,.about,.footer-grid{grid-template-columns:1fr;gap:38px}.booking-grid{grid-template-columns:1fr 1fr}
+      section{padding:56px 0}.booking-grid{grid-template-columns:1fr}.booking-card{min-height:auto}.live-img,.about img{height:430px}.about img{order:-1}.date{font-size:43px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="nav-left">
+        <a href="#home" aria-label="Forside"><img class="mark" src="assets/vv-icon.jpg" alt="Vanja V ikon"></a>
+        <div class="navlinks">
+          <a href="#music" data-no="Musikk" data-en="Music">Musikk</a>
+          <a href="#live">Live</a>
+          <a href="#booking">Booking</a>
+          <a href="#about" data-no="Om" data-en="About">Om</a>
+          <a href="#contact" data-no="Kontakt" data-en="Contact">Kontakt</a>
+        </div>
+      </div>
+      <div class="lang-switch" aria-label="Språkvalg">
+        <button id="lang-no" class="active" type="button">NO</button><span>|</span><button id="lang-en" type="button">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <img class="hero-bg" src="assets/hero.jpg" alt="Vanja V på scenen">
+  <div class="wrap">
+    <div class="hero-content">
+      <img class="signature" src="assets/vanja-v-signature.png" alt="Vanja V">
+      <p class="eyebrow" data-no="Artist · Låtskriver" data-en="Singer · Songwriter">Artist · Låtskriver</p>
+      <p class="tagline" data-no="Ærlig pop fra Vestlandet." data-en="Honest pop from Western Norway.">Ærlig pop fra Vestlandet.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#music" data-no="Lytt" data-en="Listen">Lytt</a>
+        <a class="btn" href="#live" data-no="Live" data-en="Live dates">Live</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="music">
+  <div class="wrap release">
+    <img class="release-cover" src="assets/you-got-issues.jpg" alt="You Got Issues av Vanja V">
+    <div>
+      <div class="label" data-no="Nyeste utgivelse" data-en="Latest release">Nyeste utgivelse</div>
+      <h2>You Got Issues</h2>
+      <p data-no="En energisk poplåt om å sette grenser, trekke en tydelig linje og nekte å bære noen andres problemer."
+         data-en="A bold, energetic pop track about drawing the line, setting boundaries and refusing to carry someone else's issues.">
+         En energisk poplåt om å sette grenser, trekke en tydelig linje og nekte å bære noen andres problemer.
+      </p>
+      <div class="streaming">
+        <a class="btn" href="https://open.spotify.com/artist/6nBv2yYvAeSN1VN8E4HWNC?si=ohYSHPa0TVOFmyBDlr-kSg" target="_blank" rel="noopener" aria-label="Spotify">Spotify</a>
+        <a class="btn" href="https://music.apple.com/no/artist/vanja-v/1201701107" target="_blank" rel="noopener" aria-label="Apple Music">Apple Music</a>
+        <a class="btn" href="https://youtube.com/@vanja_v?si=3mfJzazEhFIMqQmC" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="live-section" id="live">
+  <div class="wrap live-grid">
+    <img class="live-img" src="assets/live.jpg" alt="Vanja V live">
+    <div>
+      <div class="label">Live</div>
+      <div class="date" data-no="14. november 2026" data-en="14 November 2026">14. november 2026</div>
+      <p><strong>Kongshall</strong><br>Valestrand, Osterøy</p>
+      <div class="schedule">
+        <strong>19:30</strong><span data-no="Dørene åpner" data-en="Doors open">Dørene åpner</span>
+        <strong>20:15</strong><span>Support</span>
+        <strong>21:00</strong><span>Vanja V</span>
+      </div>
+      <a class="btn primary" href="#" data-no="Billetter" data-en="Tickets">Billetter</a>
+      <div class="ticket-note" data-no="Billettlenke kommer snart." data-en="Ticket link coming soon.">Billettlenke kommer snart.</div>
+    </div>
+  </div>
+</section>
+
+
+<section class="booking-section" id="booking">
+  <div class="wrap">
+    <div class="booking-intro">
+      <div class="label">Booking</div>
+      <h2 data-no="Musikk til øyeblikkene som betyr noe." data-en="Music for the moments that matter.">Musikk til øyeblikkene som betyr noe.</h2>
+      <p data-no="Vanja V kan bookes til både private og profesjonelle arrangementer – fra de nære øyeblikkene til de store festene. Ta kontakt, så finner vi en musikalsk løsning som passer arrangementet."
+         data-en="Vanja V is available for both private and professional events – from intimate moments to big celebrations. Get in touch and we can find a musical setup that fits your event.">
+         Vanja V kan bookes til både private og profesjonelle arrangementer – fra de nære øyeblikkene til de store festene. Ta kontakt, så finner vi en musikalsk løsning som passer arrangementet.
+      </p>
+    </div>
+
+    <div class="booking-grid">
+      <article class="booking-card">
+        <h3 data-no="Bryllup" data-en="Weddings">Bryllup</h3>
+        <p data-no="Sang under vielsen, taffel og stemningsfull musikk under middagen, eller livemusikk til festen."
+           data-en="Ceremony performances, atmospheric dinner music, or live music for the celebration.">
+           Sang under vielsen, taffel og stemningsfull musikk under middagen, eller livemusikk til festen.
+        </p>
+      </article>
+      <article class="booking-card">
+        <h3 data-no="Firma & bedrift" data-en="Corporate events">Firma & bedrift</h3>
+        <p data-no="Livemusikk til firmafester, julebord, markeringer, konferanser og andre bedriftseventer."
+           data-en="Live music for company parties, celebrations, conferences and other corporate events.">
+           Livemusikk til firmafester, julebord, markeringer, konferanser og andre bedriftseventer.
+        </p>
+      </article>
+      <article class="booking-card">
+        <h3 data-no="Begravelse & minnestund" data-en="Funerals & memorials">Begravelse & minnestund</h3>
+        <p data-no="Sang og musikk til avskjeder og minnestunder, tilpasset ønsker, rammer og anledning."
+           data-en="Songs and music for farewells and memorial services, adapted to the wishes and setting of the occasion.">
+           Sang og musikk til avskjeder og minnestunder, tilpasset ønsker, rammer og anledning.
+        </p>
+      </article>
+      <article class="booking-card">
+        <h3 data-no="Andre arrangementer" data-en="Other events">Andre arrangementer</h3>
+        <p data-no="Private feiringer, konserter og andre anledninger der livemusikk kan gjøre opplevelsen ekstra spesiell."
+           data-en="Private celebrations, concerts and other occasions where live music can make the experience extra special.">
+           Private feiringer, konserter og andre anledninger der livemusikk kan gjøre opplevelsen ekstra spesiell.
+        </p>
+      </article>
+    </div>
+
+    <div class="booking-contact">
+      <a class="btn primary" href="mailto:soexmusicmanagement@gmail.com?subject=Bookingforespørsel%20Vanja%20V" data-no="Forespør booking" data-en="Booking enquiry">Forespør booking</a>
+      <span class="booking-contact-note" data-no="Ta kontakt for priser, tilgjengelighet, booking eller andre henvendelser."
+            data-en="Get in touch for pricing, availability, bookings or other enquiries.">
+        Ta kontakt for priser, tilgjengelighet, booking eller andre henvendelser.
+      </span>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <div class="label" data-no="Om" data-en="About">Om</div>
+      <h2 data-no="Låter fra hjertet." data-en="Songs from the heart.">Låter fra hjertet.</h2>
+      <p data-no="Vanja V er en norsk artist og låtskriver fra Vestlandet. Musikken kombinerer sterke melodier, ærlige tekster og et moderne poputtrykk – fra sårbarhet og store følelser til mer energiske og kompromissløse øyeblikk."
+         data-en="Vanja V is a Norwegian singer and songwriter from Western Norway. Her music pairs strong melodies with honest lyrics and a modern pop sound, moving between vulnerability, big emotions and more energetic, uncompromising moments.">
+         Vanja V er en norsk artist og låtskriver fra Vestlandet. Musikken kombinerer sterke melodier, ærlige tekster og et moderne poputtrykk – fra sårbarhet og store følelser til mer energiske og kompromissløse øyeblikk.
+      </p>
+      <p data-no="Ved siden av egne utgivelser arbeider Vanja også med låtskriving og vokalprosjekter, og har erfaring fra både scene og skjerm."
+         data-en="Alongside her own releases, Vanja also works with songwriting and vocal projects and has experience from both stage and screen.">
+         Ved siden av egne utgivelser arbeider Vanja også med låtskriving og vokalprosjekter, og har erfaring fra både scene og skjerm.
+      </p>
+    </div>
+    <img src="assets/about.jpg" alt="Portrett av Vanja V">
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-title" data-no="Booking & kontakt" data-en="Booking & management">Booking & kontakt</div>
+        <a class="email" href="mailto:soexmusicmanagement@gmail.com">soexmusicmanagement@gmail.com</a>
+      </div>
+      <div>
+        <div class="footer-title" data-no="Følg Vanja V" data-en="Connect">Følg Vanja V</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/vanjav_official/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.snapchat.com/add/vanjav_official" target="_blank" rel="noopener">Snapchat</a>
+          <a href="https://www.tiktok.com/@vanjav_official" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+      <div>
+        <svg class="wave-logo" viewBox="0 0 260 70" role="img" aria-label="Vatle Entertainment soundwave">
+          <g stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="72" y1="35" x2="78" y2="35"/>
+            <line x1="82" y1="31" x2="82" y2="39"/>
+            <line x1="88" y1="27" x2="88" y2="43"/>
+            <line x1="94" y1="23" x2="94" y2="47"/>
+            <line x1="100" y1="18" x2="100" y2="52"/>
+            <line x1="106" y1="12" x2="106" y2="58"/>
+            <line x1="112" y1="17" x2="112" y2="53"/>
+            <line x1="118" y1="8" x2="118" y2="62"/>
+            <line x1="124" y1="14" x2="124" y2="56"/>
+            <line x1="130" y1="4" x2="130" y2="66"/>
+            <line x1="136" y1="14" x2="136" y2="56"/>
+            <line x1="142" y1="8" x2="142" y2="62"/>
+            <line x1="148" y1="17" x2="148" y2="53"/>
+            <line x1="154" y1="12" x2="154" y2="58"/>
+            <line x1="160" y1="18" x2="160" y2="52"/>
+            <line x1="166" y1="23" x2="166" y2="47"/>
+            <line x1="172" y1="27" x2="172" y2="43"/>
+            <line x1="178" y1="31" x2="178" y2="39"/>
+            <line x1="182" y1="35" x2="188" y2="35"/>
+          </g>
+        </svg>
+        <div class="company">VATLE ENTERTAINMENT</div>
+      </div>
+    </div>
+    <div class="copyright">© 2026 VATLE ENTERTAINMENT · ALL RIGHTS RESERVED</div>
+  </div>
+</footer>
+
+<script>
+  const noBtn = document.getElementById('lang-no');
+  const enBtn = document.getElementById('lang-en');
+  const translatables = document.querySelectorAll('[data-no][data-en]');
+
+  function setLanguage(lang) {
+    translatables.forEach(el => {
+      el.textContent = el.dataset[lang];
+    });
+    document.documentElement.lang = lang === 'no' ? 'no' : 'en';
+    noBtn.classList.toggle('active', lang === 'no');
+    enBtn.classList.toggle('active', lang === 'en');
+
+    if (lang === 'no') {
+      document.title = 'Vanja V | Artist & låtskriver';
+      document.querySelector('meta[name="description"]').setAttribute(
+        'content',
+        'Offisiell nettside for Vanja V – norsk artist og låtskriver. Musikk, konserter, booking og kontakt.'
+      );
+    } else {
+      document.title = 'Vanja V | Singer & Songwriter';
+      document.querySelector('meta[name="description"]').setAttribute(
+        'content',
+        'Official website of Norwegian singer and songwriter Vanja V. Music, live dates, booking and contact.'
+      );
+    }
+    localStorage.setItem('vanja-language', lang);
+  }
+
+  noBtn.addEventListener('click', () => setLanguage('no'));
+  enBtn.addEventListener('click', () => setLanguage('en'));
+
+  const saved = localStorage.getItem('vanja-language');
+  if (saved === 'en') setLanguage('en');
+</script>
+</body>
+</html>

@@ -36,7 +36,35 @@
     .tagline{font-family:"Cormorant Garamond",serif;font-size:25px;font-style:italic;color:var(--gold);margin:0 0 30px}
     .buttons{display:flex;gap:14px;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;justify-content:center;min-width:145px;padding:14px 22px;border:1px solid var(--gold);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
-    .btn.primary{background:var(--burgundy);border-color:var(--burgundy)}
+    .btn.primary{background:var(--burgundy);border-color:var(--burgundy)} .concert-strip{
+  background:#111;
+  border-bottom:1px solid var(--line);
+  padding:18px 0;
+}
+.concert-strip-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.concert-strip strong{
+  display:block;
+  color:var(--gold);
+  font-size:11px;
+  letter-spacing:.14em;
+  margin-bottom:5px;
+}
+.concert-strip span{
+  font-family:"Cormorant Garamond",serif;
+  font-size:22px;
+}
+.concert-strip a{
+  color:var(--gold);
+  font-size:12px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
     section{padding:76px 0;border-bottom:1px solid #262626}
     .label{color:#b84752;font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
     h2{font-family:"Cormorant Garamond",serif;font-size:clamp(42px,6vw,72px);font-weight:500;margin:0 0 24px;line-height:.95}
@@ -72,7 +100,8 @@
     .wave-logo{width:210px;max-width:100%;height:auto;margin-top:0;color:var(--gold)}
     .company{font-family:"Cormorant Garamond",serif;color:var(--gold);letter-spacing:.12em;margin-top:8px}
     .copyright{text-align:center;color:#8e8985;font-size:10px;letter-spacing:.08em;margin-top:48px}
-    @media(max-width:800px){
+    @media(max-width:800px){ .concert-strip-inner{flex-direction:column;align-items:flex-start;gap:12px}
+.concert-strip span{font-size:20px}
       .navlinks{display:none}.hero{min-height:86vh}.hero:after{background:linear-gradient(0deg,rgba(5,5,5,.92) 0%,rgba(5,5,5,.62) 54%,rgba(5,5,5,.18) 100%)}
       .hero-bg{object-position:58% center}.hero-content{align-self:flex-end;padding:0 0 70px;width:100%}
       .signature{width:min(430px,88vw)}.release,.live-grid,.about,.footer-grid{grid-template-columns:1fr;gap:38px}.booking-grid{grid-template-columns:1fr 1fr}
@@ -116,17 +145,33 @@
     </div>
   </div>
 </section>
-
+<div class="concert-strip">
+  <div class="wrap concert-strip-inner">
+    <div>
+      <strong>14. NOVEMBER 2026 · KONGSHALL, VALESTRAND</strong>
+      <span data-no="Vanja V – Live i Kongshall" data-en="Vanja V – Live at Kongshall">Vanja V – Live i Kongshall</span>
+    </div>
+    <a href="https://vatleentertainment.ticketco.events/no/nb/e/kongshall"
+       target="_blank"
+       rel="noopener"
+       data-no="Kjøp billett"
+       data-en="Buy tickets">
+      Kjøp billett →
+    </a>
+  </div>
+</div>
 <section id="music">
   <div class="wrap release">
     <img class="release-cover" src="assets/you-got-issues.jpg" alt="You Got Issues av Vanja V">
     <div>
-      <div class="label" data-no="Nyeste utgivelse" data-en="Latest release">Nyeste utgivelse</div>
-      <h2>You Got Issues</h2>
+      <div class="label" data-no="Månedens låt · Juni 2026" data-en="Song of the Month · June 2026">Månedens låt · Juni 2026</div>
       <p data-no="En energisk poplåt om å sette grenser, trekke en tydelig linje og nekte å bære noen andres problemer."
          data-en="A bold, energetic pop track about drawing the line, setting boundaries and refusing to carry someone else's issues.">
          En energisk poplåt om å sette grenser, trekke en tydelig linje og nekte å bære noen andres problemer.
-      </p>
+        </p>
+<p data-no="«You Got Issues» ble kåret til Månedens låt hos Indigoboom i juni 2026, og er nå med i konkurransen om å bli Årets låt."   data-en="«You Got Issues» was named Song of the Month by Indigoboom in June 2026 and is now competing for Song of the Year.">
+  «You Got Issues» blei kåra til Månadens låt hos Indigoboom i juni 2026, og er no med i konkurransen om å bli Årets låt.
+</p>
       <div class="streaming">
         <a class="btn" href="https://open.spotify.com/artist/6nBv2yYvAeSN1VN8E4HWNC?si=ohYSHPa0TVOFmyBDlr-kSg" target="_blank" rel="noopener" aria-label="Spotify">Spotify</a>
         <a class="btn" href="https://music.apple.com/no/artist/vanja-v/1201701107" target="_blank" rel="noopener" aria-label="Apple Music">Apple Music</a>
@@ -148,8 +193,8 @@
         <strong>20:15</strong><span>Support</span>
         <strong>21:00</strong><span>Vanja V</span>
       </div>
-      <a class="btn primary" href="#" data-no="Billetter" data-en="Tickets">Billetter</a>
-      <div class="ticket-note" data-no="Billettlenke kommer snart." data-en="Ticket link coming soon.">Billettlenke kommer snart.</div>
+      <a class="btn primary" href="https://vatleentertainment.ticketco.events/no/nb/e/kongshall" target="_blank" rel="noopener" data-no="Kjøp billett" data-en="Buy tickets">Kjøp billett</a>
+<div class="ticket-note" data-no="Avgrensa tal billettar · 15+ med vergeordning" data-en="Limited tickets · 15+ with guardian">Avgrensa tal billettar · 15+ med vergeordning</div>
     </div>
   </div>
 </section>

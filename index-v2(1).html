@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Vanja V | Booking &amp; livemusikk</title>
+<meta content="Book Vanja V til bryllup, firmaevent, begravelse, minnestund og andre arrangementer. Livemusikk til øyeblikkene som betyr noe." name="description"/>
+<meta content="#0b0b0b" name="theme-color"/>
+<link href="assets/vv-icon.jpg" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root{
+      --black:#0b0b0b; --off:#f7f5f2; --warm:#cfc7bf;
+      --burgundy:#5a0f1a; --gold:#d4af57; --line:rgba(212,175,87,.38);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--black);color:var(--off);font-family:Montserrat,Arial,sans-serif;font-weight:300}
+    a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
+    .wrap{width:min(1180px,90vw);margin:auto}
+    header{position:absolute;z-index:5;left:0;right:0;top:0;padding:24px 0}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .nav-left{display:flex;align-items:center;gap:22px}
+    .mark{width:42px;height:42px;border-radius:4px;object-fit:cover}
+    .navlinks{display:flex;gap:30px;font-size:12px;letter-spacing:.13em;text-transform:uppercase}
+    .lang-switch{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+    .lang-switch button{background:none;border:0;color:#b8b2ad;cursor:pointer;padding:6px 2px;font:inherit}
+    .lang-switch button.active{color:var(--gold)}
+    .hero{min-height:94vh;position:relative;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid #262626}
+    .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.96) 0%,rgba(5,5,5,.78) 34%,rgba(5,5,5,.18) 67%,rgba(5,5,5,.08) 100%)}
+    .hero-content{position:relative;z-index:2;width:min(650px,80vw);padding-top:70px}
+    .signature{width:min(520px,72vw);filter:drop-shadow(0 2px 10px rgba(0,0,0,.35));margin-bottom:22px}
+    .eyebrow{font-size:14px;letter-spacing:.32em;text-transform:uppercase;margin:0 0 12px}
+    .tagline{font-family:"Cormorant Garamond",serif;font-size:25px;font-style:italic;color:var(--gold);margin:0 0 30px}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-width:145px;padding:14px 22px;border:1px solid var(--gold);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+    .btn.primary{background:var(--burgundy);border-color:var(--burgundy)}
+    section{padding:76px 0;border-bottom:1px solid #262626}
+    .label{color:#b84752;font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
+    h2{font-family:"Cormorant Garamond",serif;font-size:clamp(42px,6vw,72px);font-weight:500;margin:0 0 24px;line-height:.95}
+    .release{display:grid;grid-template-columns:minmax(260px,430px) 1fr;gap:70px;align-items:center}
+    .release-cover{box-shadow:0 24px 70px rgba(0,0,0,.45)}
+    .streaming{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .live-section{background:linear-gradient(100deg,#24070b,#5a0f1a 55%,#25070b)}
+    .live-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .live-img{width:100%;height:520px;object-fit:cover;object-position:center}
+    .date{font-family:"Cormorant Garamond",serif;font-size:52px;line-height:1;margin:8px 0 28px}
+    .schedule{display:grid;grid-template-columns:100px 1fr;gap:12px 18px;margin:24px 0 30px;font-size:14px}
+    .schedule strong{color:var(--gold);font-weight:500}
+    .ticket-note{font-size:12px;color:#d8c8c8;margin-top:10px}
+    .about{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center}
+    .about img{width:100%;height:560px;object-fit:cover;object-position:center 25%}
+    .about p{line-height:1.8;color:#d5d0cb;max-width:560px}
+
+    .booking-section{background:#11100f}
+    .booking-intro{max-width:760px;margin-bottom:42px}
+    .booking-intro p{line-height:1.8;color:#d5d0cb;font-size:16px}
+    .booking-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:34px 0 38px}
+    .booking-card{border:1px solid var(--line);padding:28px 24px;min-height:190px;background:rgba(255,255,255,.015)}
+    .booking-card h3{font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:27px;font-weight:500;margin:0 0 14px}
+    .booking-card p{color:#cfc9c3;line-height:1.65;font-size:13px;margin:0}
+    .booking-contact{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+    .booking-contact-note{font-size:13px;color:#aaa39d}
+
+    footer{padding:54px 0 30px}
+    .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:50px}
+    .footer-title{font-size:12px;letter-spacing:.17em;text-transform:uppercase;color:#b84752;margin-bottom:18px}
+    .email{color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:4px}
+    .socials{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+    .wave-logo{width:210px;max-width:100%;height:auto;margin-top:0;color:var(--gold)}
+    .company{font-family:"Cormorant Garamond",serif;color:var(--gold);letter-spacing:.12em;margin-top:8px}
+    .copyright{text-align:center;color:#8e8985;font-size:10px;letter-spacing:.08em;margin-top:48px}
+    @media(max-width:800px){
+      .navlinks{display:none}.hero{min-height:86vh}.hero:after{background:linear-gradient(0deg,rgba(5,5,5,.92) 0%,rgba(5,5,5,.62) 54%,rgba(5,5,5,.18) 100%)}
+      .hero-bg{object-position:58% center}.hero-content{align-self:flex-end;padding:0 0 70px;width:100%}
+      .signature{width:min(430px,88vw)}.release,.live-grid,.about,.footer-grid{grid-template-columns:1fr;gap:38px}.booking-grid{grid-template-columns:1fr 1fr}
+      section{padding:56px 0}.booking-grid{grid-template-columns:1fr}.booking-card{min-height:auto}.live-img,.about img{height:430px}.about img{order:-1}.date{font-size:43px}
+    }
+  
+    /* Booking-first redesign */
+    .hero{min-height:96vh}
+    .hero-content{width:min(720px,82vw)}
+    .hero-booking-title{
+      font-family:"Cormorant Garamond",serif;
+      font-size:clamp(42px,5.4vw,68px);
+      font-weight:500;
+      line-height:1;
+      margin:4px 0 18px;
+      max-width:680px;
+    }
+    .hero-booking-copy{
+      max-width:620px;
+      color:#e1dcd6;
+      line-height:1.75;
+      font-size:15px;
+      margin:0 0 28px;
+    }
+    .booking-section{padding-top:88px}
+    .booking-intro{max-width:850px}
+    .contact-panel{
+      margin-top:52px;
+      display:grid;
+      grid-template-columns:.78fr 1.22fr;
+      gap:52px;
+      align-items:start;
+      padding-top:52px;
+      border-top:1px solid var(--line);
+    }
+    .contact-copy h2{font-size:clamp(40px,5vw,62px)}
+    .contact-copy p{color:#d5d0cb;line-height:1.75;max-width:440px}
+    .contact-form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .field{display:flex;flex-direction:column;gap:8px}
+    .field.full{grid-column:1/-1}
+    .field label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#bdb7b1}
+    .field input,.field select,.field textarea{
+      width:100%;
+      background:#0b0b0b;
+      color:var(--off);
+      border:1px solid #3a3431;
+      border-radius:0;
+      padding:14px 15px;
+      font:inherit;
+      font-size:14px;
+      outline:none;
+    }
+    .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+    .field textarea{min-height:150px;resize:vertical}
+    .form-actions{grid-column:1/-1;display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:4px}
+    .form-note{font-size:11px;color:#9f9892;line-height:1.5}
+    .success-note{
+      display:none;
+      grid-column:1/-1;
+      border:1px solid var(--line);
+      padding:14px 16px;
+      color:var(--gold);
+      font-size:13px;
+      line-height:1.6;
+    }
+    .footer-contact-link{display:inline-block;color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:4px}
+    @media(max-width:800px){
+      .hero-content{padding-bottom:60px}
+      .hero-booking-title{font-size:clamp(38px,11vw,54px)}
+      .hero-booking-copy{font-size:14px}
+      .contact-panel{grid-template-columns:1fr;gap:30px}
+      .contact-form{grid-template-columns:1fr}
+      .field.full,.form-actions,.success-note{grid-column:1}
+    }
+
+    /* V7 refinements */
+    header{background:linear-gradient(to bottom,rgba(6,6,6,.96),rgba(6,6,6,.72),transparent)}
+    .top-brand{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:3px;
+      padding-top:14px;
+      margin-bottom:8px;
+      color:var(--off);
+    }
+    .top-brand .wave-logo{width:150px;height:38px}
+    .top-brand .company{font-size:9px;letter-spacing:.28em}
+    nav{padding-top:0}
+    .vocalist-section{padding:92px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .vocalist-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:70px;align-items:start}
+    .vocalist-copy h2{font-size:clamp(42px,5.5vw,66px);margin:0 0 18px}
+    .vocalist-copy p{color:#d4cfca;line-height:1.8;max-width:680px}
+    .vocalist-points{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+    .vocalist-point{border-top:1px solid var(--line);padding-top:14px}
+    .vocalist-point strong{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px}
+    .vocalist-point span{font-size:13px;line-height:1.6;color:#aaa39c}
+    .repertoire-actions{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+    .floating-player{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:20;
+      width:300px;
+      border:1px solid rgba(200,163,107,.35);
+      background:rgba(8,8,8,.94);
+      box-shadow:0 12px 40px rgba(0,0,0,.38);
+      backdrop-filter:blur(10px);
+      display:none;
+    }
+    .floating-player iframe{display:block;width:100%;height:152px;border:0}
+    .player-label{
+      padding:9px 12px 7px;
+      font-size:9px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:#b9b2ab;
+    }
+    @media(max-width:800px){
+      .top-brand{padding-top:10px;margin-bottom:4px}
+      .top-brand .wave-logo{width:120px}
+      .vocalist-grid{grid-template-columns:1fr;gap:32px}
+      .vocalist-points{grid-template-columns:1fr}
+      .floating-player{right:8px;bottom:8px;width:min(300px,calc(100vw - 16px))}
+    }
+</style>
+</head>
+<body>
+<header><div class="top-brand"><svg aria-label="Vatle Entertainment" class="wave-logo" role="img" viewbox="0 0 260 70">
+<g stroke="currentColor" stroke-linecap="round" stroke-width="2.2">
+<line x1="72" x2="78" y1="35" y2="35"></line><line x1="82" x2="82" y1="31" y2="39"></line>
+<line x1="88" x2="88" y1="27" y2="43"></line><line x1="94" x2="94" y1="23" y2="47"></line>
+<line x1="100" x2="100" y1="18" y2="52"></line><line x1="106" x2="106" y1="12" y2="58"></line>
+<line x1="112" x2="112" y1="17" y2="53"></line><line x1="118" x2="118" y1="8" y2="62"></line>
+<line x1="124" x2="124" y1="14" y2="56"></line><line x1="130" x2="130" y1="4" y2="66"></line>
+<line x1="136" x2="136" y1="14" y2="56"></line><line x1="142" x2="142" y1="8" y2="62"></line>
+<line x1="148" x2="148" y1="17" y2="53"></line><line x1="154" x2="154" y1="12" y2="58"></line>
+<line x1="160" x2="160" y1="18" y2="52"></line><line x1="166" x2="166" y1="23" y2="47"></line>
+<line x1="172" x2="172" y1="27" y2="43"></line><line x1="178" x2="178" y1="31" y2="39"></line>
+<line x1="182" x2="188" y1="35" y2="35"></line>
+</g>
+</svg><div class="company">VATLE ENTERTAINMENT</div></div>
+<div class="wrap">
+<nav>
+<div class="nav-left">
+<a aria-label="Forside" href="#home"><img alt="Vanja V ikon" class="mark" src="assets/vv-icon.jpg"/></a>
+<div class="navlinks"><a data-en="Booking" data-no="Booking" href="#booking">Booking</a><a data-en="Vocalist" data-no="Om vokalisten" href="#vocalist">Om vokalisten</a><a data-en="Live" data-no="Live" href="#live">Live</a><a data-en="About" data-no="Om artisten" href="#about">Om artisten</a><a data-en="Music" data-no="Musikk" href="#music">Musikk</a><a data-en="Contact" data-no="Kontakt" href="#contact-form">Kontakt</a></div>
+</div>
+<div aria-label="Språkvalg" class="lang-switch">
+<button class="active" id="lang-no" type="button">NO</button><span>|</span><button id="lang-en" type="button">EN</button>
+</div>
+</nav>
+</div>
+</header>
+<main>
+<section class="hero" id="home">
+<img alt="Vanja V på scenen" class="hero-bg" src="assets/hero.jpg"/>
+<div class="wrap">
+<div class="hero-content"><img alt="Vanja V" class="signature" src="assets/vanja-v-signature.png"/><h1 class="hero-booking-title" data-en="Music for the moments that matter." data-no="Musikk til øyeblikkene som betyr noe.">Musikk til øyeblikkene som betyr noe.</h1><p class="hero-booking-copy" data-en="Vanja V is available for weddings, corporate events, funerals, memorials, private celebrations and other occasions where live music can make the moment mean even more." data-no="Vanja V kan bookes til bryllup, firmaarrangementer, begravelser, minnestunder, private feiringer og andre anledninger der livemusikk skal gjøre øyeblikket litt større.">Vanja V kan bookes til bryllup, firmaarrangementer, begravelser, minnestunder, private feiringer og andre anledninger der livemusikk skal gjøre øyeblikket litt større.</p><div class="buttons"><a class="btn primary" data-en="Booking enquiry" data-no="Forespør booking" href="#contact-form">Forespør booking</a><a class="btn" data-en="Explore options" data-no="Se muligheter" href="#booking">Se muligheter</a></div></div>
+</div>
+</section><section class="booking-section" id="booking">
+<div class="wrap">
+<div class="booking-intro">
+<div class="label">Booking</div>
+<h2 data-en="Live music for your event." data-no="Livemusikk til ditt arrangement.">Livemusikk til ditt arrangement.</h2>
+<p data-en="Whether you are planning a wedding, corporate event, memorial or another special occasion, the music can be tailored to the setting, mood and format. Send an enquiry and we will find a setup that fits." data-no="Enten du planlegger et bryllup, en firmafest, en minnestund eller en annen markering, kan musikken tilpasses både anledning, stemning og format. Send en forespørsel, så finner vi en løsning som passer.">Enten du planlegger et bryllup, en firmafest, en minnestund eller en annen markering, kan musikken tilpasses både anledning, stemning og format. Send en forespørsel, så finner vi en løsning som passer.</p>
+</div>
+<div class="booking-grid">
+<article class="booking-card">
+<h3 data-en="Weddings" data-no="Bryllup">Bryllup</h3>
+<p data-en="Ceremony performances, atmospheric dinner music, or live music for the celebration." data-no="Sang under vielsen, taffel og stemningsfull musikk under middagen, eller livemusikk til festen.">
+           Sang under vielsen, taffel og stemningsfull musikk under middagen, eller livemusikk til festen.
+        </p>
+</article>
+<article class="booking-card">
+<h3 data-en="Corporate events" data-no="Firma &amp; bedrift">Firma &amp; bedrift</h3>
+<p data-en="Live music for company parties, celebrations, conferences and other corporate events." data-no="Livemusikk til firmafester, julebord, markeringer, konferanser og andre bedriftseventer.">
+           Livemusikk til firmafester, julebord, markeringer, konferanser og andre bedriftseventer.
+        </p>
+</article>
+<article class="booking-card">
+<h3 data-en="Funerals &amp; memorials" data-no="Begravelse &amp; minnestund">Begravelse &amp; minnestund</h3>
+<p data-en="Songs and music for farewells and memorial services, adapted to the wishes and setting of the occasion." data-no="Sang og musikk til avskjeder og minnestunder, tilpasset ønsker, rammer og anledning.">
+           Sang og musikk til avskjeder og minnestunder, tilpasset ønsker, rammer og anledning.
+        </p>
+</article>
+<article class="booking-card">
+<h3 data-en="Other events" data-no="Andre arrangementer">Andre arrangementer</h3>
+<p data-en="Private celebrations, concerts and other occasions where live music can make the experience extra special." data-no="Private feiringer, konserter og andre anledninger der livemusikk kan gjøre opplevelsen ekstra spesiell.">
+           Private feiringer, konserter og andre anledninger der livemusikk kan gjøre opplevelsen ekstra spesiell.
+        </p>
+</article>
+</div>
+</div>
+</section><section class="vocalist-section" id="vocalist"><div class="wrap vocalist-grid"><div><div class="label" data-en="About the vocalist" data-no="Om vokalisten">Om vokalisten</div><h2 data-en="A voice tailored to the occasion." data-no="En stemme tilpasset anledningen.">En stemme tilpasset anledningen.</h2></div><div class="vocalist-copy"><p data-en="Vanja V offers live music for intimate and formal moments as well as events where the music should lift the atmosphere. The repertoire and expression can be adapted to the occasion, your wishes and the setting – from weddings and dinners to memorials, corporate events and private celebrations." data-no="Vanja V tilbyr livemusikk til både nære og høytidelige øyeblikk, og til arrangementer der musikken skal løfte stemningen. Repertoar og uttrykk kan tilpasses anledning, ønsker og rammer – enten det gjelder vielse, middag, minnestund, firmaarrangement eller privat feiring.">Vanja V tilbyr livemusikk til både nære og høytidelige øyeblikk, og til arrangementer der musikken skal løfte stemningen. Repertoar og uttrykk kan tilpasses anledning, ønsker og rammer – enten det gjelder vielse, middag, minnestund, firmaarrangement eller privat feiring.</p><div class="vocalist-points"><div class="vocalist-point"><strong data-en="Tailored repertoire" data-no="Tilpasset repertoar">Tilpasset repertoar</strong><span data-en="Songs and style are chosen around the occasion and the atmosphere you want." data-no="Sanger og uttrykk velges med utgangspunkt i anledningen og stemningen du ønsker.">Sanger og uttrykk velges med utgangspunkt i anledningen og stemningen du ønsker.</span></div><div class="vocalist-point"><strong data-en="Song requests" data-no="Ønskelåter">Ønskelåter</strong><span data-en="If a particular song means something special to you, it can be considered when planning the performance." data-no="Har du en låt som betyr noe spesielt, kan den tas med i planleggingen av det musikalske innslaget.">Har du en låt som betyr noe spesielt, kan den tas med i planleggingen av det musikalske innslaget.</span></div><div class="vocalist-point"><strong data-en="Private events" data-no="Private arrangementer">Private arrangementer</strong><span data-en="Weddings, ceremonies, anniversaries, funerals, memorials and other special occasions." data-no="Bryllup, vielser, jubileum, begravelser, minnestunder og andre markeringer.">Bryllup, vielser, jubileum, begravelser, minnestunder og andre markeringer.</span></div><div class="vocalist-point"><strong data-en="Corporate &amp; events" data-no="Bedrift &amp; event">Bedrift &amp; event</strong><span data-en="Music for company parties, conferences, dinners and other professional events." data-no="Musikk til firmafester, julebord, konferanser, middager og andre profesjonelle arrangementer.">Musikk til firmafester, julebord, konferanser, middager og andre profesjonelle arrangementer.</span></div></div><div class="repertoire-actions"><a class="btn" data-en="View repertoire on Spotify" data-no="Se repertoar på Spotify" href="#" id="repertoire-link">Se repertoar på Spotify</a><a class="btn primary" data-en="Booking enquiry" data-no="Forespør booking" href="#contact-form">Forespør booking</a></div></div></div></section><section class="booking-section" id="contact"><div class="wrap"><div class="contact-panel" id="contact-form"><div class="contact-copy"><div class="label" data-en="Booking enquiry" data-no="Forespør booking">Forespør booking</div><h2 data-en="Tell us about your event." data-no="Fortell litt om arrangementet.">Fortell litt om arrangementet.</h2><p data-en="Fill in what you know so far. You do not need to have every detail decided – we will get back to you by email." data-no="Fyll ut skjemaet med det du vet foreløpig. Du trenger ikke ha alle detaljene klare – vi tar kontakt på e-post.">Fyll ut skjemaet med det du vet foreløpig. Du trenger ikke ha alle detaljene klare – vi tar kontakt på e-post.</p></div><form action="https://formsubmit.co/soexmusicmanagement@gmail.com" class="contact-form" method="POST"><input name="_subject" type="hidden" value="Ny bookingforespørsel fra vatleentertainment.no"/><input name="_template" type="hidden" value="table"/><input name="_captcha" type="hidden" value="false"/><input name="_next" type="hidden" value="https://vatleentertainment.no/?sent=1#contact-form"/><input autocomplete="off" name="_honey" style="display:none" tabindex="-1" type="text"/><div class="field"><label data-en="Name *" data-no="Navn *" for="Navn">Navn *</label><input id="Navn" name="Navn" required="" type="text"/></div><div class="field"><label data-en="Email *" data-no="E-post *" for="E-post">E-post *</label><input id="E-post" name="E-post" required="" type="email"/></div><div class="field"><label data-en="Phone" data-no="Telefon" for="Telefon">Telefon</label><input id="Telefon" name="Telefon" type="tel"/></div><div class="field"><label data-en="Event date" data-no="Dato for arrangement" for="Dato">Dato for arrangement</label><input id="Dato" name="Dato" type="date"/></div><div class="field full"><label data-en="What is the enquiry about?" data-no="Hva gjelder forespørselen?" for="Arrangementstype">Hva gjelder forespørselen?</label><select id="Arrangementstype" name="Arrangementstype" required=""><option data-en="Select event type" data-no="Velg type arrangement" disabled="" selected="" value="">Velg type arrangement</option><option data-en="Wedding" data-no="Bryllup" value="Bryllup">Bryllup</option><option data-en="Corporate event" data-no="Firma / bedrift" value="Firma / bedrift">Firma / bedrift</option><option data-en="Funeral / memorial" data-no="Begravelse / minnestund" value="Begravelse / minnestund">Begravelse / minnestund</option><option data-en="Private celebration" data-no="Privat feiring" value="Privat feiring">Privat feiring</option><option data-en="Other" data-no="Annet" value="Annet">Annet</option></select></div><div class="field full"><label data-en="Location / venue" data-no="Sted / lokale" for="Sted">Sted / lokale</label><input id="Sted" name="Sted" type="text"/></div><div class="field full"><label data-en="Tell us about your event and what you have in mind *" data-no="Fortell litt om arrangementet og hva du ser for deg *" for="Melding">Fortell litt om arrangementet og hva du ser for deg *</label><textarea id="Melding" name="Melding" required=""></textarea></div><div class="success-note" data-en="Thank you! Your enquiry has been sent. We will get back to you as soon as we can." data-no="Takk! Forespørselen din er sendt. Vi tar kontakt så snart vi kan." id="form-success">Takk! Forespørselen din er sendt. Vi tar kontakt så snart vi kan.</div><div class="form-actions"><button class="btn primary" data-en="Send enquiry" data-no="Send forespørsel" type="submit">Send forespørsel</button><span class="form-note" data-en="Your enquiry is sent to the booking address and is non-binding." data-no="Forespørselen sendes til bookingadressen og er ikke bindende.">Forespørselen sendes til bookingadressen og er ikke bindende.</span></div></form></div></div></section><section class="live-section" id="live">
+<div class="wrap live-grid">
+<img alt="Vanja V live" class="live-img" src="assets/live.jpg"/>
+<div>
+<div class="label">Live</div>
+<div class="date" data-en="14 November 2026" data-no="14. november 2026">14. november 2026</div>
+<p><strong>Kongshall</strong><br/>Valestrand, Osterøy</p>
+<div class="schedule">
+<strong>19:30</strong><span data-en="Doors open" data-no="Dørene åpner">Dørene åpner</span>
+<strong>20:15</strong><span>Support</span>
+<strong>21:00</strong><span>Vanja V</span>
+</div>
+<a class="btn primary" data-en="Tickets" data-no="Billetter" href="#">Billetter</a>
+<div class="ticket-note" data-en="Ticket link coming soon." data-no="Billettlenke kommer snart.">Billettlenke kommer snart.</div>
+</div>
+</div>
+</section><section id="about">
+<div class="wrap about">
+<div>
+<div class="label" data-en="About" data-no="Om">Om</div>
+<h2 data-en="Songs from the heart." data-no="Låter fra hjertet.">Låter fra hjertet.</h2>
+<p data-en="Vanja V is a Norwegian singer and songwriter from Western Norway. Her music pairs strong melodies with honest lyrics and a modern pop sound, moving between vulnerability, big emotions and more energetic, uncompromising moments." data-no="Vanja V er en norsk artist og låtskriver fra Vestlandet. Musikken kombinerer sterke melodier, ærlige tekster og et moderne poputtrykk – fra sårbarhet og store følelser til mer energiske og kompromissløse øyeblikk.">
+         Vanja V er en norsk artist og låtskriver fra Vestlandet. Musikken kombinerer sterke melodier, ærlige tekster og et moderne poputtrykk – fra sårbarhet og store følelser til mer energiske og kompromissløse øyeblikk.
+      </p>
+<p data-en="Alongside her own releases, Vanja also works with songwriting and vocal projects and has experience from both stage and screen." data-no="Ved siden av egne utgivelser arbeider Vanja også med låtskriving og vokalprosjekter, og har erfaring fra både scene og skjerm.">
+         Ved siden av egne utgivelser arbeider Vanja også med låtskriving og vokalprosjekter, og har erfaring fra både scene og skjerm.
+      </p>
+</div>
+<img alt="Portrett av Vanja V" src="assets/about.jpg"/>
+</div>
+</section><section id="music">
+<div class="wrap release">
+<img alt="You Got Issues av Vanja V" class="release-cover" src="assets/you-got-issues.jpg"/>
+<div>
+<div class="label" data-en="Latest release" data-no="Nyeste utgivelse">Nyeste utgivelse</div>
+<h2>You Got Issues</h2>
+<p data-en="A bold, energetic pop track about drawing the line, setting boundaries and refusing to carry someone else's issues." data-no="En energisk poplåt om å sette grenser, trekke en tydelig linje og nekte å bære noen andres problemer.">
+         En energisk poplåt om å sette grenser, trekke en tydelig linje og nekte å bære noen andres problemer.
+      </p>
+<div class="streaming">
+<a aria-label="Spotify" class="btn" href="https://open.spotify.com/artist/6nBv2yYvAeSN1VN8E4HWNC?si=ohYSHPa0TVOFmyBDlr-kSg" rel="noopener" target="_blank">Spotify</a>
+<a aria-label="Apple Music" class="btn" href="https://music.apple.com/no/artist/vanja-v/1201701107" rel="noopener" target="_blank">Apple Music</a>
+<a aria-label="YouTube" class="btn" href="https://youtube.com/@vanja_v?si=3mfJzazEhFIMqQmC" rel="noopener" target="_blank">YouTube</a>
+</div>
+</div>
+</div>
+</section></main>
+<footer id="footer">
+<div class="wrap">
+<div class="footer-grid">
+<div>
+<div class="footer-title" data-en="Booking &amp; management" data-no="Booking &amp; kontakt">Booking &amp; kontakt</div>
+<a class="footer-contact-link" data-en="Go to contact form" data-no="Gå til kontaktskjema" href="#contact-form">Gå til kontaktskjema</a>
+</div>
+<div>
+<div class="footer-title" data-en="Connect" data-no="Følg Vanja V">Følg Vanja V</div>
+<div class="socials">
+<a href="https://www.instagram.com/vanjav_official/" rel="noopener" target="_blank">Instagram</a>
+<a href="https://www.facebook.com/" rel="noopener" target="_blank">Facebook</a>
+<a href="https://www.snapchat.com/add/vanjav_official" rel="noopener" target="_blank">Snapchat</a>
+<a href="https://www.tiktok.com/@vanjav_official" rel="noopener" target="_blank">TikTok</a>
+</div>
+</div>
+<div>
+<svg aria-label="Vatle Entertainment soundwave" class="wave-logo" role="img" viewbox="0 0 260 70">
+<g stroke="currentColor" stroke-linecap="round" stroke-width="2.2">
+<line x1="72" x2="78" y1="35" y2="35"></line>
+<line x1="82" x2="82" y1="31" y2="39"></line>
+<line x1="88" x2="88" y1="27" y2="43"></line>
+<line x1="94" x2="94" y1="23" y2="47"></line>
+<line x1="100" x2="100" y1="18" y2="52"></line>
+<line x1="106" x2="106" y1="12" y2="58"></line>
+<line x1="112" x2="112" y1="17" y2="53"></line>
+<line x1="118" x2="118" y1="8" y2="62"></line>
+<line x1="124" x2="124" y1="14" y2="56"></line>
+<line x1="130" x2="130" y1="4" y2="66"></line>
+<line x1="136" x2="136" y1="14" y2="56"></line>
+<line x1="142" x2="142" y1="8" y2="62"></line>
+<line x1="148" x2="148" y1="17" y2="53"></line>
+<line x1="154" x2="154" y1="12" y2="58"></line>
+<line x1="160" x2="160" y1="18" y2="52"></line>
+<line x1="166" x2="166" y1="23" y2="47"></line>
+<line x1="172" x2="172" y1="27" y2="43"></line>
+<line x1="178" x2="178" y1="31" y2="39"></line>
+<line x1="182" x2="188" y1="35" y2="35"></line>
+</g>
+</svg>
+<div class="company">VATLE ENTERTAINMENT</div>
+</div>
+</div>
+<div class="copyright">© 2026 VATLE ENTERTAINMENT · ALL RIGHTS RESERVED</div>
+</div>
+</footer>
+<script>
+  const noBtn = document.getElementById('lang-no');
+  const enBtn = document.getElementById('lang-en');
+
+  function setLanguage(lang) {
+    document.querySelectorAll('[data-no][data-en]').forEach(el => {
+      el.textContent = el.dataset[lang];
+    });
+    document.documentElement.lang = lang === 'no' ? 'no' : 'en';
+    noBtn.classList.toggle('active', lang === 'no');
+    enBtn.classList.toggle('active', lang === 'en');
+
+    if (lang === 'no') {
+      document.title = 'Vanja V | Booking & livemusikk';
+      document.querySelector('meta[name="description"]').setAttribute(
+        'content',
+        'Book Vanja V til bryllup, firmaevent, begravelse, minnestund og andre arrangementer. Livemusikk til øyeblikkene som betyr noe.'
+      );
+    } else {
+      document.title = 'Vanja V | Booking & live music';
+      document.querySelector('meta[name="description"]').setAttribute(
+        'content',
+        'Book Vanja V for weddings, corporate events, funerals, memorials and other occasions. Live music for the moments that matter.'
+      );
+    }
+    localStorage.setItem('vanja-language', lang);
+  }
+
+  noBtn.addEventListener('click', () => setLanguage('no'));
+  enBtn.addEventListener('click', () => setLanguage('en'));
+
+  const saved = localStorage.getItem('vanja-language');
+  setLanguage(saved === 'en' ? 'en' : 'no');
+
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('sent') === '1') {
+    const success = document.getElementById('form-success');
+    if (success) success.style.display = 'block';
+    history.replaceState({}, '', window.location.pathname + '#contact-form');
+  }
+</script>
+<div class="floating-player" id="floating-player"><div class="player-label" data-en="Listen to Vanja V" data-no="Hør Vanja V">Hør Vanja V</div><!-- Sett inn Spotify embed-iframe her når låten er valgt --></div></body>
+</html>
